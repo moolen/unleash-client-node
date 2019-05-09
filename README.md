@@ -108,6 +108,7 @@ The initialize method takes the following arguments:
 -   **strategies** - Custom activation strategies to be used.
 -   **disableMetrics** - disable metrics
 -   **customHeaders** - Provide a map(object) of custom headers to be sent to the unleash-server
+-   **repository** - Provide a custom repository implementation to manage the underlying data
 
 ## Custom strategies
 
@@ -152,3 +153,9 @@ instance.on('ready', console.log.bind(console, 'ready'));
 // required error handling when using instance directly
 instance.on('error', console.error);
 ```
+
+## Custom repository
+
+You can manage the underlying data layer yourself if you want to. This enables you to use unleash
+offline, from a browser environment or implement your own caching layer. See
+[example](examples/custom_repository.js).
